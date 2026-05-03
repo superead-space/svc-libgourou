@@ -10,3 +10,5 @@ Adobe-Digital-Editions/
 *.pdf
 *.epub
 *.drm
+.idea
+.claude
