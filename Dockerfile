@@ -65,4 +65,7 @@ ENV DATA_DIR=/home/libgourou/files \
 
 EXPOSE 3000
 
+HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
+  CMD python3 -c "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:3000/health', timeout=3).status==200 else 1)" || exit 1
+
 CMD ["python3", "-m", "uvicorn", "server.main:app", "--host", "0.0.0.0", "--port", "3000"]
