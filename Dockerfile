@@ -14,7 +14,7 @@ RUN apt-get update && \
 
 WORKDIR /usr/src
 
-RUN git clone git://soutade.fr/libgourou.git \
+RUN git clone https://forge.soutade.fr/soutade/libgourou.git \
   && cd libgourou \
   && make BUILD_STATIC=1 STATIC_UTILS=1
 
