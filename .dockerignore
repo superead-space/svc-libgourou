@@ -3,5 +3,7 @@
 
 #include the following
 !scripts
+!server
+!requirements.txt
 !LICENSE
 !README.md
