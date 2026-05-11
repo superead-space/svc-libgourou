@@ -112,8 +112,7 @@ async def run_dedrm(req: DedrmRequest) -> dict:
             [
                 "adept_remove",
                 "--adept-directory", str(settings.ADEPT_DIR),
-                "--output-dir", str(output_dir),
-                "--output-file", req.output_file,
+                "--output-file", str(output_path_abs),
                 str(drm_path),
             ],
             timeout=settings.REQUEST_TIMEOUT,
